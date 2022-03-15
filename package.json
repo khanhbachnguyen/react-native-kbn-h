@@ -1,6 +1,6 @@
 {
   "name": "react-native-kbn-h",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "react native animated header",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -40,13 +40,13 @@
     "header",
     "animated-header"
   ],
-  "repository": "https://github/khanhbachnguyen/react-native-kbn-h",
-  "author": "khanhbachnguyen <fb.bachkhanh@gmail.com> (https://github/khanhbachnguyen)",
+  "repository": "https://github.com/khanhbachnguyen/react-native-kbn-h",
+  "author": "khanhbachnguyen <fb.bachkhanh@gmail.com> (https://github.com/khanhbachnguyen)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github/khanhbachnguyen/react-native-kbn-h/issues"
+    "url": "https://github.com/khanhbachnguyen/react-native-kbn-h/issues"
   },
-  "homepage": "https://github/khanhbachnguyen/react-native-kbn-h#readme",
+  "homepage": "https://github.com/khanhbachnguyen/react-native-kbn-h#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -147,8 +147,5 @@
         }
       ]
     ]
-  },
-  "dependencies": {
-    "babel-loader": "^8.2.3"
   }
 }

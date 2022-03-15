@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
-import React, { Fragment } from 'react';
+import React from 'react';
 import {
   ImageBackground,
   StyleSheet,
@@ -158,25 +158,24 @@ const HeaderAnimation: React.FC<HeaderAnimationProps> = ({
       <ImageBackground style={[styles.img, { height, }]} resizeMode="cover" source={backgroundImage} />
       <View style={{ top: _top, position: "absolute", left: 0, right: 0, }}>
         <Animated.View style={[styles.nav, { overflow: "hidden", backgroundColor: isBgTransition ? _backgroundTransition : bgBar, height: heightNavigation }]}>
-          {isLeft &&
-            <>
-              <View style={[styles.left, { height: heightNavigation, flex: 1 / numberElmOnNavLine }]}>
-                <View style={styles.buttonContainer}>
-                  {customLeft || (elementLeft ?
-                    <TouchableOpacity onPress={elementLeft.onPress} style={{ position: "relative" }}>
-                      {elementLeft.element}
-                    </TouchableOpacity> : <Text>Icon</Text>
-                  )}
-                </View>
+
+          <View style={[styles.left, { height: heightNavigation, flex: 1 / numberElmOnNavLine }]}>
+            {isLeft &&
+              <View style={styles.buttonContainer}>
+                {customLeft || (elementLeft ?
+                  <TouchableOpacity onPress={elementLeft.onPress} style={{ position: "relative" }}>
+                    {elementLeft.element}
+                  </TouchableOpacity> : <Text>Icon</Text>
+                )}
               </View>
-              {isSearch &&
-                <Animated.View style={[styles.containerSearch, { opacity: opcitySearch, right: widthSearch }]}>
-                  <TouchableOpacity activeOpacity={1} style={[styles.search, { paddingLeft: (width / numberElmOnNavLine / 2) + 5 }]} onPress={() => console.log("search")}>
-                    <Text style={{ color: "#999" }}>search</Text>
-                  </TouchableOpacity>
-                </Animated.View>
-              }
-            </>
+            }
+          </View>
+          {(isLeft && isSearch) &&
+            <Animated.View style={[styles.containerSearch, { opacity: opcitySearch, right: widthSearch }]}>
+              <TouchableOpacity activeOpacity={1} style={[styles.search, { paddingLeft: (width / numberElmOnNavLine / 2) + 5 }]} onPress={() => console.log("search")}>
+                <Text style={{ color: "#999" }}>search</Text>
+              </TouchableOpacity>
+            </Animated.View>
           }
           <View style={[styles.right, { height: heightNavigation, flex: 1 / (numberElmOnNavLine / 2) }]}>
             {isRight &&

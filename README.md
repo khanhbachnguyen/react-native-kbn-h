@@ -4,10 +4,10 @@ react native animated header multi-platform
 ## Installation
 
 ```sh
-npm install react-native-kbn-h
+npm install --save-dev react-native-kbn-h
 ```
 # Demo
-![Demo ]()
+![Demo ](https://github.com/khanhbachnguyen/react-native-kbn-h/blob/main/example/demo/demo.gif)
 ## Usage
 easy to use, just add your custom or leave the default blank, Here is an example of using
 ```tsx
